@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sample_flutter/getx_functions/getx_bottom_sheet.dart';
+import 'package:sample_flutter/getx_functions/reactive_state_controller.dart';
+import 'package:sample_flutter/getx_functions/reactive_state_manager.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +15,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const GetMaterialApp(
+    return  GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home:GetXBottomSheet(),
+      home: ReactiveStateController(),
     );
   }
 }
