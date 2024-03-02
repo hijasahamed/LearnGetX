@@ -7,27 +7,35 @@ class GetXBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Bottom Sheet'),),
+      appBar: AppBar(
+        title: Text('Bottom Sheet'),
+        backgroundColor: Colors.amberAccent,
+        ),
       body: Center(
         child: ElevatedButton(
           onPressed: (){
             Get.bottomSheet(             
-              Wrap(
+              Column(
                 children: [
                   ListTile(
                     leading: Icon(Icons.wb_sunny_outlined),
                     title: Text('Light Theme'),
-                   onTap: () => Get.changeThemeMode(ThemeMode.dark),
+                   onTap: () {
+                     Get.changeTheme(ThemeData.light());
+                      Get.back();
+                   },
                   ),
                   ListTile(
                     leading: Icon(Icons.nightlight_round_outlined),
                     title: Text('drark Theme'),
-                    onTap: () => Get.changeThemeMode(ThemeMode.light),
+                    onTap: () {
+                      Get.changeTheme(ThemeData.dark());
+                      Get.back();
+                    },               
                   ),
                 ],
               ),
-              barrierColor: Colors.pink,
-              backgroundColor: Colors.orange,
+              
             );
           }, 
           child:const Text('Bottom Sheet')
@@ -35,6 +43,4 @@ class GetXBottomSheet extends StatelessWidget {
       ),
     );
   }
-
-  hashi({String? name}){}
 }

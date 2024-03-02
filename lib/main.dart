@@ -1,37 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sample_flutter/getx_functions/getx_named_route_navigation.dart';
+import 'package:sample_flutter/getx_functions/getx_bottom_sheet.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
-// non route screen
+// non route screen 
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  const GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      home:GetXBottomSheet(),
+    );
+  }
+}
+
+
+
+
+// route screen 
+
 
 // class MyApp extends StatelessWidget {
 //   @override
 //   Widget build(BuildContext context) {
-//     return const GetMaterialApp(
+//     return  GetMaterialApp(
 //       debugShowCheckedModeBanner: false,
-//       home:UnNamedRouteNavigation(),
+//       defaultTransition: Transition.cupertino,
+//       initialRoute: '/one',
+//       getPages: [
+//         GetPage(name: '/one', page: () => const NamedRouteNavigation()),
+//         GetPage(name: '/two', page: () => const NamedRouteNavigationScreen2(),transition: Transition.fadeIn ),
+//         GetPage(name: '/three/:someValues', page: () => const NamedRouteNavigationScreen3(),)
+//       ],
 //     );
 //   }
 // }
-
-// route screen
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return  GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      defaultTransition: Transition.cupertino,
-      initialRoute: '/one',
-      getPages: [
-        GetPage(name: '/one', page: () => const NamedRouteNavigation()),
-        GetPage(name: '/two', page: () => const NamedRouteNavigationScreen2(),transition: Transition.fadeIn ),
-        GetPage(name: '/three/:someValues', page: () => const NamedRouteNavigationScreen3(),)
-      ],
-    );
-  }
-}
