@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ReactiveState extends StatelessWidget {
-  ReactiveState({super.key});
+class ReactiveStateManager extends StatelessWidget {
+  ReactiveStateManager({super.key});
 
   var  count=0.obs;
 
