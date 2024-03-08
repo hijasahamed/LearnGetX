@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart'; 
-import 'package:sample_flutter/getx_functions/simple_state_manager_getbuilder/ui_screen.dart';
+import 'package:get/get.dart';
+import 'package:sample_flutter/getx_functions/getx_controller_lifecycle_method/ui_screen.dart'; 
 
 
 void main() {
@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const GetMaterialApp(
+    return  GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SimpleStateManager(),
+      home: GetxControllerLifecycleMethod(),
     );
   }
 }
