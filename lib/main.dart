@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:sample_flutter/getx_functions/listen_watch/ui_screen.dart';
-import 'package:sample_flutter/getx_functions/reactive_state_controller.dart';
-import 'package:sample_flutter/getx_functions/reactive_state_manager_GetX%20with%20Controller%20Type/ui_screen.dart';
+import 'package:get/get.dart'; 
+import 'package:sample_flutter/getx_functions/simple_state_manager_getbuilder/ui_screen.dart';
 
 
 void main() {
@@ -18,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: reactivestatemanagerGetXwithControllerType(),
+      home: SimpleStateManager(),
     );
   }
 }
