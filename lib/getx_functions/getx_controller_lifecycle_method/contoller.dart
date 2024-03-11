@@ -17,15 +17,15 @@ class GetxControllerLifecycleMethodController extends GetxController{
 
 
   // better approach
-  @override
-  void onInit(){
-    print('Init called');
-    super.onInit();
-  }
+  // @override
+  // void onInit(){
+  //   print('Init called');
+  //   super.onInit();
+  // }
 
-  @override
-  void onClosed(){
-    super.onClose();
-  }
+  // @override
+  // void onClosed(){
+  //   super.onClose();
+  // }
 
 }
